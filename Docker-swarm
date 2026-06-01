@@ -1,0 +1,14 @@
+# 1. Open Docker Swarm communication ports
+sudo firewall-cmd --permanent --add-port=2376/tcp
+sudo firewall-cmd --permanent --add-port=7946/tcp
+sudo firewall-cmd --permanent --add-port=7946/udp
+sudo firewall-cmd --permanent --add-port=4789/udp
+
+# 2. Open the Swarm management port (Highly recommended on workers too, mandatory on Managers)
+sudo firewall-cmd --permanent --add-port=2377/tcp
+
+# 3. Reload firewalld to apply changes immediately
+sudo firewall-cmd --reload
+
+# 4. Restart Docker to re-apply container firewall chains
+sudo systemctl restart docker
