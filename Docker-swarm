@@ -12,3 +12,17 @@ sudo firewall-cmd --reload
 
 # 4. Restart Docker to re-apply container firewall chains
 sudo systemctl restart docker
+
+=========================================
+
+# docker swarm init --advertise-addr <MANAGER-IP>
+# docker swarm init --advertise-addr 192.168.1.3
+WE GET TOKEN FOR JOING WORKER
+
+# docker swarm join --token SWMTKN-1-2k3i3eiky5m6wb5p7akwr3eg62getc3ixose0t0hxfux60zh9v-bnk2el0uvvw4s97uziwzcvrxk 192.168.1.3:2377
+
+-------------------------------------
+
+
+
+
