@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: medical-svc
+spec:
+  selector:
+    app: kunal-app
+  ports:
+    - port: 80
+  type: NodePort
